@@ -6,7 +6,7 @@ public class Pacman extends PApplet {
     PFont font;
 
     public void settings() {
-        size(1001, 1001);
+        size(800, 800);
     }
 
     public void setup() {
