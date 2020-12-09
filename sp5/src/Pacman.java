@@ -17,8 +17,12 @@ public class Pacman extends PApplet {
 
 
     public void draw() {
+
         Background b = new Background(this);
         b.UpdateBoard();
+        Walls w = new Walls (this);
+        w.testwall();
+
     }
 }
 
