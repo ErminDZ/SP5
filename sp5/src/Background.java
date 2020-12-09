@@ -76,6 +76,8 @@ public class Background {
                        p.stroke(100, 100, 100);
                        p.rect(x * 40, y * 40, 40, 40);
                    }
+
+
                }
             }
 
