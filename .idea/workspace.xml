@@ -49,8 +49,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+<<<<<<< Updated upstream
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Skrivebord/datamatiker/programer/processing-3.5.4/core/library/core.jar" />
     <property name="project.structure.last.edited" value="Libraries" />
+=======
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/JC/Program filer/processing-3.5.4-windows64/processing-3.5.4/core/library" />
+    <property name="project.structure.last.edited" value="Modules" />
+>>>>>>> Stashed changes
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -92,6 +99,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+<<<<<<< Updated upstream
     <state x="440" y="94" key="#Project_Structure" timestamp="1607435669519">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -122,5 +130,11 @@
     </state>
     <state x="-1568" y="0" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@-1920.0.1536.832" timestamp="1607549459138" />
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/-1600.-121.1600.1160@0.0.1920.1040" timestamp="1607435908136" />
+=======
+    <state x="723" y="85" key="SettingsEditor" timestamp="1607549975069">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="723" y="85" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607549975069" />
+>>>>>>> Stashed changes
   </component>
 </project>
