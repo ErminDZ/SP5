@@ -2,25 +2,25 @@ import processing.core.PApplet;
 
 public class KeyboardInput extends PApplet {
 
-
-    boolean wDown = false;
-    boolean aDown = false;
+    boolean wUp = false;
+    boolean aLeft = false;
     boolean sDown = false;
-    boolean dDown = false;
+    boolean dRight = false;
 
-    boolean upArrow = false;
-    boolean leftArrow = false;
-    boolean downArrow = false;
-    boolean rightArrow = false;
+    boolean arrowUp = false;
+    boolean arrowLeft = false;
+    boolean arrowDown = false;
+    boolean arrowRight = false;
 
-    public boolean wDown()
+
+    public boolean wUp()
     {
-        return wDown;
+        return wUp;
     }
 
-    public boolean aDown()
+    public boolean aLeft()
     {
-        return aDown;
+        return aLeft;
     }
 
     public boolean sDown()
@@ -28,79 +28,85 @@ public class KeyboardInput extends PApplet {
         return sDown;
     }
 
-    public boolean dDown()
+    public boolean dRight()
     {
-        return dDown;
+        return dRight;
     }
 
 
-
-    public boolean upArrow()
+    public boolean arrowUp()
     {
-        return upArrow;
+        return arrowUp;
     }
 
-    public boolean leftArrow()
+    public boolean arrowLeft()
     {
-        return leftArrow;
+        return arrowLeft;
     }
 
-    public boolean downArrow()
+    public boolean arrowDown()
     {
-        return downArrow;
+        return arrowDown;
     }
 
-    public boolean rightArrow()
+    public boolean arrowRight()
     {
-        return rightArrow;
+        return arrowRight;
     }
 
 
-    public void onKeyPressed(char ch) {
+    public void onKeyPressed(char ch)
+    {
         if (ch == 'W' || ch == 'w') {
-            wDown = true;
+            wUp = true;
         } else if (ch == 'A' || ch == 'a') {
-            aDown = true;
+            aLeft = true;
         } else if (ch == 'S' || ch == 's') {
             sDown = true;
         } else if (ch == 'D' || ch == 'd') {
-            dDown = true;
+            dRight = true;
         }
     }
 
-    public void onKeyReleased(char ch) {
+
+    public void onKeyReleased(char ch)
+    {
         if (ch == 'W' || ch == 'w') {
-            wDown = false;
+            wUp = false;
         } else if (ch == 'A' || ch == 'a') {
-            aDown = false;
+            aLeft = false;
         } else if (ch == 'S' || ch == 's') {
             sDown = false;
         } else if (ch == 'D' || ch == 'd') {
-            dDown = false;
+            dRight = false;
         }
     }
 
-    public void onKeyCodePressed() {
+
+    public void onKeyCodePressed()
+    {
         if (keyCode == UP) {
-            upArrow = true;
+            arrowUp = true;
         } else if (keyCode == LEFT) {
-            leftArrow = true;
+            arrowLeft = true;
         } else if (keyCode == DOWN) {
-            downArrow = true;
+            arrowDown = true;
         } else if (keyCode == RIGHT) {
-            rightArrow = true;
+            arrowRight = true;
         }
     }
 
-    public void onKeyCodeReleased() {
+
+    public void onKeyCodeReleased()
+    {
         if (keyCode == UP) {
-            upArrow = false;
+            arrowUp = false;
         } else if (keyCode == LEFT) {
-            leftArrow = false;
+            arrowLeft = false;
         } else if (keyCode == DOWN) {
-            downArrow = false;
+            arrowDown = false;
         } else if (keyCode == RIGHT) {
-            rightArrow = false;
+            arrowRight = false;
         }
     }
 }
