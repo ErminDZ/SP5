@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58c3908b-6250-4460-bbe8-7d55ac8cef20" name="Default Changelist" comment="" />
+    <list default="true" id="58c3908b-6250-4460-bbe8-7d55ac8cef20" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/sp5/src/KeyboardInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/sp5/src/KeyboardInput.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

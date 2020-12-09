@@ -1,6 +1,7 @@
 import processing.core.PApplet;
 
-public class KeyboardInput extends PApplet {
+public class KeyboardInput extends PApplet
+{
 
     boolean wUp = false;
     boolean aLeft = false;
