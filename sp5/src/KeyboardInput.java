@@ -13,48 +13,46 @@ public class KeyboardInput extends PApplet {
     boolean downArrow = false;
     boolean rightArrow = false;
 
-    public KeyInput() {
+    public boolean wDown()
+    {
+        return wDown;
+    }
 
-        boolean wDown ()
-        {
-            return wDown;
-        }
+    public boolean aDown()
+    {
+        return aDown;
+    }
 
-        public boolean aDown ()
-        {
-            return aDown;
-        }
+    public boolean sDown()
+    {
+        return sDown;
+    }
 
-        public boolean sDown ()
-        {
-            return sDown;
-        }
-
-        public boolean dDown ()
-        {
-            return dDown;
-        }
+    public boolean dDown()
+    {
+        return dDown;
+    }
 
 
-        public boolean upArrow ()
-        {
-            return upArrow;
-        }
 
-        public boolean leftArrow ()
-        {
-            return leftArrow;
-        }
+    public boolean upArrow()
+    {
+        return upArrow;
+    }
 
-        public boolean downArrow ()
-        {
-            return downArrow;
-        }
+    public boolean leftArrow()
+    {
+        return leftArrow;
+    }
 
-        public boolean rightArrow ()
-        {
-            return rightArrow;
-        }
+    public boolean downArrow()
+    {
+        return downArrow;
+    }
+
+    public boolean rightArrow()
+    {
+        return rightArrow;
     }
 
 
