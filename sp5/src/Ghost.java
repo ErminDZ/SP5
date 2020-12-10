@@ -5,8 +5,10 @@ import java.util.Random;
 public class Ghost extends PApplet {
 private Random rnd;
 private Dot[] enemies;
+private Dot player;
 
-Ghost(int numberOfEnemies) throws IllegalAccessException {
+Ghost(int numberOfEnemies, Dot player) throws IllegalAccessException {
+    this.player = player;
     if (numberOfEnemies <0)
     {
         throw  new IllegalAccessException("Number of enemies must be positive");
