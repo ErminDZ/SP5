@@ -9,6 +9,7 @@ public class Walls extends PApplet {
    public void testwall() {
 
 
+
 // top outter wall
        p.fill(255, 255, 0);
        p.rect(0, 0, 800, 40);
@@ -16,7 +17,6 @@ public class Walls extends PApplet {
 // bottom outter wall
        p.fill(255, 255, 0);
        p.rect(0, 760, 800, 40);
-
 
 // bottom left outter wall
        p.fill(255, 255, 0);
@@ -41,7 +41,6 @@ public class Walls extends PApplet {
        p.rect(760, 760, 40, -320);
        p.fill(255, 255, 0);
        p.rect(760, 440, -120, 40);
-
 
 // spawn area for ghost
        p.fill(255, 255, 0);
@@ -102,7 +101,6 @@ public class Walls extends PApplet {
        p.rect(560, 200, 40, 160);
        p.fill(255, 255, 0);
        p.rect(520, 280, 80, 40);
-
 
        /*bottom half*/
 
