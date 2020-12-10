@@ -19,11 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="58c3908b-6250-4460-bbe8-7d55ac8cef20" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SP5/Walls.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SP5/Walls.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sp5/src/Walls.java" beforeDir="false" afterPath="$PROJECT_DIR$/sp5/src/Walls.java" afterDir="false" />
     </list>
+=======
+    <list default="true" id="58c3908b-6250-4460-bbe8-7d55ac8cef20" name="Default Changelist" comment="" />
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
