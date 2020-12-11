@@ -2,7 +2,9 @@ import processing.core.PApplet;
 import processing.core.PFont;
 
 public class Pacman extends PApplet {
-    //Board b = new Board(this); // 'this' refers to the PApplet that enables us to draw on the actual sketch.
+
+    Background b;
+    Player p;
     PFont font;
 
     public void settings() {
@@ -13,16 +15,30 @@ public class Pacman extends PApplet {
         frameRate(10);
         font = createFont("Arial", 16, true);
         textFont(font, 16);
+
+        b = new Background(this, 25, 25); // 'this' refers to the PApplet that enables us to draw on the actual sketch.
+        p = new Player();
+
     }
 
-
     public void draw() {
-        Background b = new Background(this);
-        Player p = new Player();
-        p.Update1();
-       // b.UpdateBoard();
 
+        p.updatePlayer();
+        b.clearBoard();
 
+        b.setBoardValue(p.getX(), p.getY(), p.getBoardValue());
+
+        b.UpdateBoard();
+    }
+
+    public void keyPressed()
+    {
+        p.onKeyPressed(key);
+    }
+
+    public void keyReleased()
+    {
+        p.onKeyReleased(key);
     }
 }
 

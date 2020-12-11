@@ -7,16 +7,15 @@ public class Background {
 
     private PApplet p;
 
-    public Background(PApplet p) {
-        this.p = p;
-    }
-
     public Dot player;
+
     int width;
     int height;
     int[][] board;
 
-    public void Board(int width, int height) {
+    public Background(PApplet p, int width, int height) {
+        this.p = p;
+
         if (width < 10 || height < 10) {
             throw new IllegalArgumentException("Width and height must be at least 10");
         }
@@ -33,11 +32,10 @@ public class Background {
     }
 
     public void clearBoard() {
-        {
-            for (int y = 0; y < height; ++y) {
-                for (int x = 0; x < width; ++x) {
-                    board[x][y] = 0;
-                }
+
+        for (int y = 0; y < height; ++y) {
+            for (int x = 0; x < width; ++x) {
+                board[x][y] = 0;
             }
         }
     }
@@ -50,8 +48,14 @@ public class Background {
         return height;
     }
 
+    public void setBoardValue(int x, int y, int value)
+    {
+        board[x][y] = value;
+    }
+
+    // Updates visuals
     public void UpdateBoard() {
-        Board(25, 25);
+
         int[][] board = getBoard();
 
         for (int y = 0; y < getHeight(); y++) {

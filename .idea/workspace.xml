@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58c3908b-6250-4460-bbe8-7d55ac8cef20" name="Default Changelist" comment="" />
+    <list default="true" id="58c3908b-6250-4460-bbe8-7d55ac8cef20" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp5/src/Background.java" beforeDir="false" afterPath="$PROJECT_DIR$/sp5/src/Background.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp5/src/Pacman.java" beforeDir="false" afterPath="$PROJECT_DIR$/sp5/src/Pacman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp5/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/sp5/src/Player.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +37,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/JC/Program filer/processing-3.5.4-windows64/processing-3.5.4/core/library" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -63,43 +69,5 @@
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="440" y="94" key="#Project_Structure" timestamp="1607435669519">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040/-1600.-121.1600.1160@0.0.1920.1040" timestamp="1607435669519" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1607609240170">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1600.-121.1600.1160@0.0.1920.1040" timestamp="1607609240170" />
-    <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1607435905775">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1600.-121.1600.1160@0.0.1920.1040" timestamp="1607435905775" />
-    <state width="1877" height="161" key="GridCell.Tab.0.bottom" timestamp="1607610372333">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="161" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1600.-121.1600.1160@0.0.1920.1040" timestamp="1607610372333" />
-    <state width="1877" height="161" key="GridCell.Tab.0.center" timestamp="1607610372333">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="161" key="GridCell.Tab.0.center/0.0.1920.1040/-1600.-121.1600.1160@0.0.1920.1040" timestamp="1607610372333" />
-    <state width="1877" height="161" key="GridCell.Tab.0.left" timestamp="1607610372333">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="161" key="GridCell.Tab.0.left/0.0.1920.1040/-1600.-121.1600.1160@0.0.1920.1040" timestamp="1607610372333" />
-    <state width="1877" height="161" key="GridCell.Tab.0.right" timestamp="1607610372333">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="161" key="GridCell.Tab.0.right/0.0.1920.1040/-1600.-121.1600.1160@0.0.1920.1040" timestamp="1607610372333" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1607435908136">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/-1600.-121.1600.1160@0.0.1920.1040" timestamp="1607435908136" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607522308034">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1600.-121.1600.1160@0.0.1920.1040" timestamp="1607522308034" />
   </component>
 </project>
