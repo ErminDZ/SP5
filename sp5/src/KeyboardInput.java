@@ -3,97 +3,99 @@ import processing.core.PApplet;
 public class KeyboardInput extends PApplet
 {
 
-    boolean wUp = false;
-    boolean aLeft = false;
-    boolean sDown = false;
-    boolean dRight = false;
+    boolean wKeyUp = false;
+    boolean aKeyLeft = false;
+    boolean sKeyDown = false;
+    boolean dKeyRight = false;
 
-    boolean arrowUp = false;
-    boolean arrowLeft = false;
-    boolean arrowDown = false;
-    boolean arrowRight = false;
+    boolean arrowKeyUp = false;
+    boolean arrowKeyLeft = false;
+    boolean arrowKeyDown = false;
+    boolean arrowKeyRight = false;
 
 
-    public boolean wUp()
+    public static boolean wKeyUp()
     {
-        return wUp;
+        return wKeyUp;
     }
 
-    public boolean aLeft()
+    public static boolean aKeyLeft()
     {
-        return aLeft;
+        return aKeyLeft;
     }
 
-    public boolean sDown()
+    public static boolean sKeyDown()
     {
-        return sDown;
+        return sKeyDown;
     }
 
-    public boolean dRight()
+    public static boolean dKeyRight()
     {
-        return dRight;
-    }
-
-
-    public boolean arrowUp()
-    {
-        return arrowUp;
-    }
-
-    public boolean arrowLeft()
-    {
-        return arrowLeft;
-    }
-
-    public boolean arrowDown()
-    {
-        return arrowDown;
-    }
-
-    public boolean arrowRight()
-    {
-        return arrowRight;
+        return dKeyRight;
     }
 
 
-    public void onKeyPressed(char ch)
+    public boolean arrowKeyUp()
+    {
+        return arrowKeyUp;
+    }
+
+    public boolean arrowKeyLeft()
+    {
+        return arrowKeyLeft;
+    }
+
+    public boolean arrowKeyDown()
+    {
+        return arrowKeyDown;
+    }
+
+    public boolean arrowKeyRight()
+    {
+        return arrowKeyRight;
+    }
+
+    // onKeyPressed and onKeyReleased is player 1 keyboard input.
+
+    public static void onKeyPressed(char ch)
     {
         if (ch == 'W' || ch == 'w') {
-            wUp = true;
+            wKeyUp = true;
         } else if (ch == 'A' || ch == 'a') {
-            aLeft = true;
+            aKeyLeft = true;
         } else if (ch == 'S' || ch == 's') {
-            sDown = true;
+            sKeyDown = true;
         } else if (ch == 'D' || ch == 'd') {
-            dRight = true;
+            dKeyRight = true;
         }
     }
 
 
-    public void onKeyReleased(char ch)
+    public static void onKeyReleased(char ch)
     {
         if (ch == 'W' || ch == 'w') {
-            wUp = false;
+            wKeyUp = false;
         } else if (ch == 'A' || ch == 'a') {
-            aLeft = false;
+            aKeyLeft = false;
         } else if (ch == 'S' || ch == 's') {
-            sDown = false;
+            sKeyDown = false;
         } else if (ch == 'D' || ch == 'd') {
-            dRight = false;
+            dKeyRight = false;
         }
     }
 
+    // onKeyCodePressed and onKeyCodeReleased is player 2 keyboard Input.
 
     public void onKeyCodePressed()
     {
         if (keyCode == UP) {
-            arrowUp = true;
+            arrowKeyUp = true;
         } else if (keyCode == LEFT) {
-            arrowLeft = true;
+            arrowKeyLeft = true;
         } else if (keyCode == DOWN) {
-            arrowDown = true;
+            arrowKeyDown = true;
         } else if (keyCode == RIGHT) {
-            arrowRight = true;
+            arrowKeyRight = true;
         }
     }
 
@@ -101,13 +103,13 @@ public class KeyboardInput extends PApplet
     public void onKeyCodeReleased()
     {
         if (keyCode == UP) {
-            arrowUp = false;
+            arrowKeyUp = false;
         } else if (keyCode == LEFT) {
-            arrowLeft = false;
+            arrowKeyLeft = false;
         } else if (keyCode == DOWN) {
-            arrowDown = false;
+            arrowKeyDown = false;
         } else if (keyCode == RIGHT) {
-            arrowRight = false;
+            arrowKeyRight = false;
         }
     }
 }

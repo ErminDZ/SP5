@@ -2,7 +2,7 @@ import processing.core.PApplet;
 
 
 public class Player extends PApplet {
-    private Keys keys;
+    private KeyboardInput keyboardInput;
     private Dot dot;
     private int[][] board;
     private int boardValue = 1;
@@ -24,32 +24,32 @@ public class Player extends PApplet {
 
     public Player() {
         dot = new Dot(0, 0, width - 1, height - 1);
-        keys = new Keys();
+        keyboardInput = new KeyboardInput();
     }
 
 
 
     public void onKeyPressed(char ch) {
 
-        keys.onKeyPressed(ch);
+        KeyboardInput.onKeyPressed(ch);
     }
 
     public void onKeyReleased(char ch) {
-        keys.onKeyReleased(ch);
+        KeyboardInput.onKeyReleased(ch);
     }
 
     public void updatePlayer() {
         //Update player
-        if (keys.wDown() && !keys.sDown()) {
+        if (KeyboardInput.wKeyUp() && !KeyboardInput.sKeyDown()) {
             dot.moveUp();
         }
-        if (keys.aDown() && !keys.dDown()) {
+        if (KeyboardInput.aKeyLeft() && !KeyboardInput.dKeyRight()) {
             dot.moveLeft();
         }
-        if (keys.sDown() && !keys.wDown()) {
+        if (KeyboardInput.sKeyDown() && !KeyboardInput.wKeyUp()) {
             dot.moveDown();
         }
-        if (keys.dDown() && !keys.aDown()) {
+        if (KeyboardInput.dKeyRight() && !KeyboardInput.aKeyLeft()) {
             dot.moveRight();
         }
     }
