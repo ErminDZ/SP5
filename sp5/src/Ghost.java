@@ -3,23 +3,23 @@ import processing.core.PApplet;
 import java.util.Random;
 
 public class Ghost extends PApplet {
-private Random rnd;
-private Dot[] enemies;
-private Dot player;
+    private Random rnd;
+    private Dot[] enemies;
+    private Dot player;
 
-Ghost(int numberOfEnemies, Dot player) throws IllegalAccessException {
-    this.player = player;
-    if (numberOfEnemies <0)
-    {
-        throw  new IllegalAccessException("Number of enemies must be positive");
-    }
-    enemies = new Dot[numberOfEnemies];
+    Ghost(int numberOfEnemies, Dot player) throws IllegalAccessException {
+        this.player = player;
+        if (numberOfEnemies <0)
+        {
+            throw  new IllegalAccessException("Number of enemies must be positive");
+        }
+        enemies = new Dot[numberOfEnemies];
 
-    for (int i =0; i < numberOfEnemies; i++)
-    {
-        enemies[i] = new Dot(width-1, height-1, width-1, height -1);
+        for (int i =0; i < numberOfEnemies; i++)
+        {
+            enemies[i] = new Dot(width-1, height-1, width-1, height -1);
+        }
     }
-}
 
     private void updateEnemies()
     {

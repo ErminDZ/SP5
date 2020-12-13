@@ -3,15 +3,15 @@ import processing.core.PApplet;
 public class KeyboardInput extends PApplet
 {
 
-    boolean wKeyUp = false;
-    boolean aKeyLeft = false;
-    boolean sKeyDown = false;
-    boolean dKeyRight = false;
+    static boolean wKeyUp = false;
+    static boolean aKeyLeft = false;
+    static boolean sKeyDown = false;
+    static boolean dKeyRight = false;
 
-    boolean arrowKeyUp = false;
-    boolean arrowKeyLeft = false;
-    boolean arrowKeyDown = false;
-    boolean arrowKeyRight = false;
+    static boolean arrowKeyUp = false;
+    static boolean arrowKeyLeft = false;
+    static boolean arrowKeyDown = false;
+    static boolean arrowKeyRight = false;
 
 
     public static boolean wKeyUp()

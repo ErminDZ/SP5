@@ -13,6 +13,7 @@ public class Background {
     int height;
     int[][] board;
 
+
     public Background(PApplet p, int width, int height) {
         this.p = p;
 
@@ -23,7 +24,6 @@ public class Background {
         this.board = new int[width][height];
         this.width = width;
         this.height = height;
-
 
     }
 
