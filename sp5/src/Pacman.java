@@ -6,6 +6,7 @@ public class Pacman extends PApplet {
     Background b;
     Player p;
     PFont font;
+    UserInterface ui;
 
     public void settings() {
         size(1001, 1001);
@@ -17,7 +18,9 @@ public class Pacman extends PApplet {
         textFont(font, 16);
 
         b = new Background(this, 25, 25); // 'this' refers to the PApplet that enables us to draw on the actual sketch.
+
         p = new Player();
+        ui = new UserInterface(this, p);
 
     }
 

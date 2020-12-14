@@ -7,16 +7,11 @@ public class Player extends PApplet {
     private Dot dot;
     private int[][] board;
     private int boardValue = 1;
-    private int player1Life;
-    private int player2Life;
+    private int playerLife; // UI
 
-//    public int getPlayer1Life() { Kan ikke få det til, at virke helt.
-//        return this.player1Life;
-//    }
-//
-//    public int getPlayer2Life() {
-//        return this.player2Life;
-//    }
+    public int getPlayerLife() {
+        return this.playerLife;
+    }
 
     public int getX()
     {
@@ -36,6 +31,8 @@ public class Player extends PApplet {
     public Player() {
         dot = new Dot(0, 0, width - 1, height - 1);
         keyboardInput = new KeyboardInput();
+
+        this.playerLife = 3;          // UI / Player Class
     }
 
 
