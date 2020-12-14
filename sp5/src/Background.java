@@ -1,7 +1,5 @@
 import processing.core.PApplet;
 
-import java.util.Random;
-
 public class Background {
 
 
@@ -9,23 +7,41 @@ public class Background {
 
     public Dot player;
 
-    int width;
-    int height;
+
     int[][] board;
+    static int[][] staticMap;
+   // public int x;
+   // public int y;
 
 
-    public Background(PApplet p, int width, int height) {
+    public Background(PApplet p) {
         this.p = p;
 
-        if (width < 10 || height < 10) {
-            throw new IllegalArgumentException("Width and height must be at least 10");
-        }
-
-        this.board = new int[width][height];
-        this.width = width;
-        this.height = height;
-
+        this.board = getStaticMap;
     }
+
+    public int[][] getStaticMap = new int[][]{
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+            {0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0},
+            {0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0},
+            {0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0},
+            {0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0},
+            {0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0},
+            {0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0},
+            {0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0},
+            {0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0},
+            {0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0},
+            {0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0},
+            {0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0},
+            {0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0},
+            {0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0},
+            {0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0},
+            {0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0},
+            {0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0},
+            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+    };
 
     public int[][] getBoard() {
         return board;
@@ -33,23 +49,13 @@ public class Background {
 
     public void clearBoard() {
 
-        for (int y = 0; y < height; ++y) {
-            for (int x = 0; x < width; ++x) {
-                board[x][y] = 0;
-            }
-        }
+        board = getStaticMap;
     }
 
-    public int getWidth() {
-        return width;
-    }
 
-    public int getHeight() {
-        return height;
-    }
+    public void setBoardValue(int x, int y, int value) {
+        if (board == null) System.out.println("Board not found...");
 
-    public void setBoardValue(int x, int y, int value)
-    {
         board[x][y] = value;
     }
 
@@ -57,13 +63,13 @@ public class Background {
     public void UpdateBoard() {
 
         int[][] board = getBoard();
+        for (int y = 0; y < board.length; y++) {
+            for (int x = 0; x < board.length; x++) {
 
-        for (int y = 0; y < getHeight(); y++) {
-            for (int x = 0; x < getWidth(); x++) {
-                if (board[x][y] == 0) {
+                if (board[x][y] == 0) { //wall
+                    p.fill(252, 0, 0);
+                } else if (board[x][y] == 1) { //path
                     p.fill(0, 0, 0);
-                } else if (board[x][y] == 1) {
-                    p.fill(0, 0, 255);
                 } else if (board[x][y] == 2) {
                     p.fill(255, 0, 0);
                 } else if (board[x][y] == 3) {
@@ -80,8 +86,9 @@ public class Background {
             }
         }
     }
-
 }
+
+
 
 
 

@@ -4,8 +4,6 @@ public class Dot {
 
     Random random = new Random();
 
-
-
     private int x;
     private int y;
     private final int maxX;

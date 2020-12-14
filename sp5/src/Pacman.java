@@ -8,7 +8,7 @@ public class Pacman extends PApplet {
     PFont font;
 
     public void settings() {
-        size(1001, 1001);
+        size(800, 800);
     }
 
     public void setup() {
@@ -16,7 +16,7 @@ public class Pacman extends PApplet {
         font = createFont("Arial", 16, true);
         textFont(font, 16);
 
-        b = new Background(this, 25, 25); // 'this' refers to the PApplet that enables us to draw on the actual sketch.
+        b = new Background(this/*, 25, 25*/); // 'this' refers to the PApplet that enables us to draw on the actual sketch.
         p = new Player();
 
     }
@@ -26,18 +26,18 @@ public class Pacman extends PApplet {
         p.updatePlayer();
         b.clearBoard();
 
+        if (p == null) System.out.println("Player not found");
+
         b.setBoardValue(p.getX(), p.getY(), p.getBoardValue());
 
         b.UpdateBoard();
     }
 
-    public void keyPressed()
-    {
+    public void keyPressed() {
         p.onKeyPressed(key);
     }
 
-    public void keyReleased()
-    {
+    public void keyReleased() {
         p.onKeyReleased(key);
     }
 }
