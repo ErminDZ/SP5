@@ -10,7 +10,7 @@ public class Player extends PApplet {
     private int player1Life;
     private int player2Life;
 
-    //public int getPlayer1Life() { Kan ikke få det til, at virke helt.
+//    public int getPlayer1Life() { Kan ikke få det til, at virke helt.
 //        return this.player1Life;
 //    }
 //
