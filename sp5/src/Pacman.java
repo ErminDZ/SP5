@@ -3,13 +3,13 @@ import processing.core.PFont;
 
 public class Pacman extends PApplet {
 
-    Background background;
-    Player player;
+    Background b;
+    Player p;
+    Ghost[] ghosts = new Ghost[4];
     PFont font;
-    UserInterface ui;
 
     public void settings() {
-        size(800, 800);
+        size(1001, 1001);
     }
 
     public void setup() {
@@ -17,38 +17,46 @@ public class Pacman extends PApplet {
         font = createFont("Arial", 16, true);
         textFont(font, 16);
 
-        background = new Background(this); // 'this' refers to the PApplet that enables us to draw on the actual sketch.
-        player = new Player(background);
+        b = new Background(this, 25, 25); // 'this' refers to the PApplet that enables us to draw on the actual sketch.
+        p = new Player();
 
-        player.getPlayerLife();
+        int ghostColorOffset = 3;
+        for (int i =0; i < ghosts.length; i++)
+        {
+//          ghosts[i] = new Ghost(i + ghostColorOffset, p); // TODO: Fix the value of the board so it correctly fits to each ghost color.
 
-
-        // for each ghost!! {
-           //ghost.setBoard(b.getBoard());
-        // }
-
+        }
     }
+
 
     public void draw() {
 
-        player.updatePlayer();
-        background.clearBoard();
+        b.clearBoard();
 
-        background.setBoardValue(player.getX(), player.getY(), player.getBoardValue());
+        // Update Ghosts
+        for (int i = 0; i < ghosts.length; i++)
+        {
+//            ghosts[i].update();
+//            b.setBoardValue(ghosts[i].dot.getX(),ghosts[i].dot.getY(), ghosts[i].getBoardValue());
+        }
 
-        // checkCollisions(); // this method is to implement collision checks for pacman vs ghosts, cheese and powerups.
+        // Update Player
 
-        background.UpdateBoard();
+        p.updatePlayer();
+        b.setBoardValue(p.getX(), p.getY(), p.getBoardValue());
 
-        ui.ui();
+        // Redraw board
+        b.UpdateBoard();
     }
 
-    public void keyPressed() {
-        player.onKeyPressed(key);
+    public void keyPressed()
+    {
+        p.onKeyPressed(key);
     }
 
-    public void keyReleased() {
-        player.onKeyReleased(key);
+    public void keyReleased()
+    {
+        p.onKeyReleased(key);
     }
 }
 

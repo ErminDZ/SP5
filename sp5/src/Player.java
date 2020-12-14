@@ -4,32 +4,26 @@ import processing.core.PApplet;
 public class Player extends PApplet {
     private KeyboardInput keyboardInput;
     private Dot dot;
-    private int boardValue = 3;
-    private int playerLife = 3;
 
-    public int getPlayerLife() {
-        return this.playerLife;
-    }
+    private int boardValue = 1;
 
-    public int getX()
-    {
+    public int getX() {
         return this.dot.getX();
     }
 
-    public int getY()
-    {
+    public int getY() {
         return this.dot.getY();
     }
 
-    public int getBoardValue()
-    {
+    public int getBoardValue() {
         return boardValue;
     }
 
-    public Player(Background b) {
-        dot = new Dot(1, 1, width - 1, height - 1, b);
+    public Player() {
+        dot = new Dot(12, 12);
         keyboardInput = new KeyboardInput();
     }
+
 
     public void onKeyPressed(char ch) {
 
@@ -41,23 +35,40 @@ public class Player extends PApplet {
     }
 
     public void updatePlayer() {
-        //Update player
         if (KeyboardInput.wKeyUp() && !KeyboardInput.sKeyDown()) {
             dot.moveUp();
         }
         if (KeyboardInput.aKeyLeft() && !KeyboardInput.dKeyRight()) {
+            if (checkForTeleport())
+            {
+                dot.setX(24);
+            }
             dot.moveLeft();
         }
         if (KeyboardInput.sKeyDown() && !KeyboardInput.wKeyUp()) {
             dot.moveDown();
         }
         if (KeyboardInput.dKeyRight() && !KeyboardInput.aKeyLeft()) {
+            if (checkForTeleport())
+            {
+                dot.setX(0);
+            }
             dot.moveRight();
         }
     }
 
-    public void Update1() {
-
-        updatePlayer();
+    private boolean checkForTeleport()
+    {
+        if (dot.getY() == 12 || dot.getY() == 13)
+        {
+            if (dot.getX() == 0 || dot.getX() == 24)
+            {
+                return true;
+            }
+        }
+        return false;
     }
+
 }
+
+
