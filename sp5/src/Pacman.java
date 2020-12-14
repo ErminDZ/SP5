@@ -3,10 +3,9 @@ import processing.core.PFont;
 
 public class Pacman extends PApplet {
 
-    Background background;
-    Player player;
+    Background b;
+    Player p;
     PFont font;
-    UserInterface ui; // UI
 
     public void settings() {
         size(800, 800);
@@ -17,33 +16,34 @@ public class Pacman extends PApplet {
         font = createFont("Arial", 16, true);
         textFont(font, 16);
 
-        background = new Background(this, 25, 25); // 'this' refers to the PApplet that enables us to draw on the actual sketch.
+        b = new Background(this); // 'this' refers to the PApplet that enables us to draw on the actual sketch.
+        p = new Player(b);
 
-        player = new Player();
-        ui = new UserInterface(this, player); // UI
+
+        // for each ghost!! {
+           //ghost.setBoard(b.getBoard());
+        // }
 
     }
 
     public void draw() {
 
-        player.updatePlayer();
-        background.clearBoard();
+        p.updatePlayer();
+        b.clearBoard();
 
-        background.setBoardValue(player.getX(), player.getY(), player.getBoardValue());
+        b.setBoardValue(p.getX(), p.getY(), p.getBoardValue());
 
-        background.UpdateBoard();
+        // checkCollisions(); // this method is to implement collision checks for pacman vs ghosts, cheese and powerups.
 
-        // ui.ui(); // UI KAN IKKE FÅ DET TIL AT VIRKE. WORK IN PROGRESS
+        b.UpdateBoard();
     }
 
-    public void keyPressed()
-    {
-        player.onKeyPressed(key);
+    public void keyPressed() {
+        p.onKeyPressed(key);
     }
 
-    public void keyReleased()
-    {
-        player.onKeyReleased(key);
+    public void keyReleased() {
+        p.onKeyReleased(key);
     }
 }
 

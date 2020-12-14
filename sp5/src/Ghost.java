@@ -5,9 +5,10 @@ import java.util.Random;
 public class Ghost extends PApplet {
     private Random rnd;
     private Dot[] enemies;
+
     private Dot player;
 
-    Ghost(int numberOfEnemies, Dot player) throws IllegalAccessException {
+    Ghost(int numberOfEnemies, Dot player, Background b) throws IllegalAccessException {
         this.player = player;
         if (numberOfEnemies <0)
         {
@@ -17,7 +18,7 @@ public class Ghost extends PApplet {
 
         for (int i =0; i < numberOfEnemies; i++)
         {
-            enemies[i] = new Dot(width-1, height-1, width-1, height -1);
+            enemies[i] = new Dot(width-1, height-1, width-1, height -1, b);
         }
     }
 
