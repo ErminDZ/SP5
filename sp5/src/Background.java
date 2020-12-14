@@ -7,7 +7,8 @@ public class Background {
 
     private PApplet p;
 
-    public Dot player;
+    public Dot d;
+    public Player player;
 
     int width;
     int height;
@@ -48,8 +49,9 @@ public class Background {
         return height;
     }
 
-    public void setBoardValue(int x, int y, int value)
-    {
+    public void setBoardValue(int x, int y, int value) {
+        if (x > 25)
+            System.out.println(x);
         board[x][y] = value;
     }
 
@@ -62,23 +64,33 @@ public class Background {
             for (int x = 0; x < getWidth(); x++) {
                 if (board[x][y] == 0) {
                     p.fill(0, 0, 0);
-                } else if (board[x][y] == 1) {
-                    p.fill(0, 0, 255);
+                } else if (board[x][y] == 1) { // YELLOW
+                    p.fill(255, 255, 0);
                 } else if (board[x][y] == 2) {
                     p.fill(255, 0, 0);
-                } else if (board[x][y] == 3) {
-                    p.fill(0, 255, 0);
-                } else if (board[x][y] == 4) //NY
+                } else if (board[x][y] == 3) { //ORANGE
+                    p.fill(255, 168, 1);
+                } else if (board[x][y] == 4) // RED
                 {
-                    p.fill(255, 255, 0);
-                } else if (board[x][y] == 5) //NY
+                    p.fill(255, 0, 0);
+                } else if (board[x][y] == 5) // PINK
                 {
-                    p.fill(0, 255, 0);
+                    p.fill(255, 193, 203);
+                } else if (board[x][y] == 6) // LIGHT BLUE
+                {
+                    p.fill(0, 255, 255);
                 }
+
+                // DELETE ME:
+                if (x == 0 && y == 12 || x == 24 && y == 12)
+                    p.fill(255,255,255);
+
                 p.stroke(100, 100, 100);
                 p.rect(x * 40, y * 40, 40, 40);
             }
         }
+
+
     }
 
 }

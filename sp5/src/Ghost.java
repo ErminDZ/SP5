@@ -3,54 +3,54 @@ import processing.core.PApplet;
 import java.util.Random;
 
 public class Ghost extends PApplet {
-    private Random rnd;
-    private Dot[] enemies;
-    private Dot player;
+    private Random rnd = new Random();
+    public Dot dot;
+    private Background background;
+    public int boardValue;
+    private Player player;
 
-    Ghost(int numberOfEnemies, Dot player) throws IllegalAccessException {
+    Ghost(int boardValue, Player player) //int numberOfEnemies) throws IllegalAccessException
+    {
         this.player = player;
-        if (numberOfEnemies <0)
-        {
-            throw  new IllegalAccessException("Number of enemies must be positive");
-        }
-        enemies = new Dot[numberOfEnemies];
+        this.boardValue = boardValue;
 
-        for (int i =0; i < numberOfEnemies; i++)
-        {
-            enemies[i] = new Dot(width-1, height-1, width-1, height -1);
-        }
+        dot = new Dot(12, 12);
+
     }
 
-    private void updateEnemies()
+    public int getBoardValue()
     {
-        for (int i = 0; i < enemies.length; ++i)
-        {
-            //Should we follow or move randomly?
-            //2 out of 3 we will follow..
+        return boardValue;
+    }
+
+    public void update()
+    {
+
             if (rnd.nextInt(3) < 2)
             {
+
                 //We follow
-                int dx = player.getX() - enemies[i].getX();
-                int dy = player.getY() - enemies[i].getY();
+                int dx = player.getX() - dot.getX();
+                int dy = player.getY() - dot.getY();
 
                 if (abs(dx) > abs(dy))
                 {
                     if (dx > 0)
                     {
                         //Player is to the right
-                        enemies[i].moveRight();
+                        dot.moveRight();
                     } else
                     {
                         //Player is to the left
-                        enemies[i].moveLeft();
+                        dot.moveLeft();
                     }
                 } else if (dy > 0)
                 {
                     //Player is down;
-                    enemies[i].moveDown();
+                    dot.moveDown();
                 } else
                 {//Player is up;
-                    enemies[i].moveUp();
+                    dot.moveUp();
                 }
             } else
             {
@@ -59,22 +59,20 @@ public class Ghost extends PApplet {
                 if (move == 0)
                 {
                     //Move right
-                    enemies[i].moveRight();
+                    dot.moveRight();
                 } else if (move == 1)
                 {
                     //Move left
-                    enemies[i].moveLeft();
+                    dot.moveLeft();
                 } else if (move == 2)
                 {
                     //Move up
-                    enemies[i].moveUp();
+                    dot.moveUp();
                 } else if (move == 3)
                 {
                     //Move down
-                    enemies[i].moveDown();
+                    dot.moveDown();
                 }
             }
-        }
     }
-
 }
