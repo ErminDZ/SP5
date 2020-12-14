@@ -29,13 +29,14 @@ public class Pacman extends PApplet {
     public void draw() {
 
         p.updatePlayer();
-        b.clearBoard();
 
+        b.clearBoard();
         b.setBoardValue(p.getX(), p.getY(), p.getBoardValue());
 
         // checkCollisions(); // this method is to implement collision checks for pacman vs ghosts, cheese and powerups.
 
         b.UpdateBoard();
+
     }
 
     public void keyPressed() {
