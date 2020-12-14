@@ -3,10 +3,10 @@ import processing.core.PFont;
 
 public class Pacman extends PApplet {
 
-    Background b;
-    Player p;
+    Background background;
+    Player player;
     PFont font;
-    UserInterface ui;
+    UserInterface ui; // UI
 
     public void settings() {
         size(800, 800);
@@ -17,31 +17,33 @@ public class Pacman extends PApplet {
         font = createFont("Arial", 16, true);
         textFont(font, 16);
 
-        b = new Background(this, 25, 25); // 'this' refers to the PApplet that enables us to draw on the actual sketch.
+        background = new Background(this, 25, 25); // 'this' refers to the PApplet that enables us to draw on the actual sketch.
 
-        p = new Player();
-        ui = new UserInterface(this, p);
+        player = new Player();
+        ui = new UserInterface(this, player); // UI
 
     }
 
     public void draw() {
 
-        p.updatePlayer();
-        b.clearBoard();
+        player.updatePlayer();
+        background.clearBoard();
 
-        b.setBoardValue(p.getX(), p.getY(), p.getBoardValue());
+        background.setBoardValue(player.getX(), player.getY(), player.getBoardValue());
 
-        b.UpdateBoard();
+        background.UpdateBoard();
+
+        // ui.ui(); // UI KAN IKKE FÅ DET TIL AT VIRKE. WORK IN PROGRESS
     }
 
     public void keyPressed()
     {
-        p.onKeyPressed(key);
+        player.onKeyPressed(key);
     }
 
     public void keyReleased()
     {
-        p.onKeyReleased(key);
+        player.onKeyReleased(key);
     }
 }
 
