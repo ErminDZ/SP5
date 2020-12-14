@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66069c80-2a5e-47fa-b3dd-a3c73b0d7fc7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sp5/src/Pacman.java" beforeDir="false" afterPath="$PROJECT_DIR$/sp5/src/Pacman.java" afterDir="false" />
-    </list>
+    <list default="true" id="66069c80-2a5e-47fa-b3dd-a3c73b0d7fc7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +42,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Skrivebord/datamatiker/programer/processing-3.5.4/core/library" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -85,6 +83,59 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="765" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1607894749748">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="221" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1607894749748" />
+    <state x="690" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1607892889955">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1607878281414" />
+    <state x="690" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607892889955" />
+    <state x="-1344" y="154" key="FileChooserDialogImpl" timestamp="1607950351213">
+      <screen x="-1920" y="0" width="1536" height="824" />
+    </state>
+    <state x="-1344" y="154" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1536.824@-1920.0.1536.824" timestamp="1607950351213" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1607949881779">
+      <screen x="-1920" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607936690464" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1536.824@-1920.0.1536.824" timestamp="1607949881779" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1607896070988" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1607949881779">
+      <screen x="-1920" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607936690464" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1536.824@-1920.0.1536.824" timestamp="1607949881779" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1607896070988" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1607949881779">
+      <screen x="-1920" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607936690464" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1536.824@-1920.0.1536.824" timestamp="1607949881779" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1607896070988" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1607949881779">
+      <screen x="-1920" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607936690464" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1536.824@-1920.0.1536.824" timestamp="1607949881779" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1607896070988" />
+    <state x="-1568" y="0" key="SettingsEditor" timestamp="1607950354944">
+      <screen x="-1920" y="0" width="1536" height="824" />
+    </state>
+    <state x="-1568" y="0" key="SettingsEditor/0.0.1920.1040/-1920.0.1536.824@-1920.0.1536.824" timestamp="1607950354944" />
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1607865173143" />
+    <state x="376" y="196" width="784" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1607934396208">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="376" y="196" width="784" height="628" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1607934396208" />
+    <state x="470" y="256" width="979" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1607875511290" />
+    <state x="803" y="277" key="refactoring.ChangeSignatureDialog" timestamp="1607895389371">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="803" y="277" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1607895389371" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
