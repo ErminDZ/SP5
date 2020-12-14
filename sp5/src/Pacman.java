@@ -3,8 +3,8 @@ import processing.core.PFont;
 
 public class Pacman extends PApplet {
 
-    Background b;
-    Player p;
+    Background background;
+    Player player;
     PFont font;
 
     public void settings() {
@@ -16,8 +16,9 @@ public class Pacman extends PApplet {
         font = createFont("Arial", 16, true);
         textFont(font, 16);
 
-        b = new Background(this); // 'this' refers to the PApplet that enables us to draw on the actual sketch.
-        p = new Player(b);
+        background = new Background(this); // 'this' refers to the PApplet that enables us to draw on the actual sketch.
+        player = new Player(background);
+        UserInterface ui;
 
 
         // for each ghost!! {
@@ -28,22 +29,24 @@ public class Pacman extends PApplet {
 
     public void draw() {
 
-        p.updatePlayer();
-        b.clearBoard();
+        player.updatePlayer();
+        background.clearBoard();
 
-        b.setBoardValue(p.getX(), p.getY(), p.getBoardValue());
+        background.setBoardValue(player.getX(), player.getY(), player.getBoardValue());
 
         // checkCollisions(); // this method is to implement collision checks for pacman vs ghosts, cheese and powerups.
 
-        b.UpdateBoard();
+        background.UpdateBoard();
+
+        ui.ui();
     }
 
     public void keyPressed() {
-        p.onKeyPressed(key);
+        player.onKeyPressed(key);
     }
 
     public void keyReleased() {
-        p.onKeyReleased(key);
+        player.onKeyReleased(key);
     }
 }
 

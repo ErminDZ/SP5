@@ -5,6 +5,11 @@ public class Player extends PApplet {
     private KeyboardInput keyboardInput;
     private Dot dot;
     private int boardValue = 3;
+    private int playerLife;
+
+    public int getPlayerLife() {
+        return this.playerLife;
+    }
 
     public int getX()
     {
