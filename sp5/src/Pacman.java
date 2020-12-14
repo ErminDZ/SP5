@@ -6,6 +6,7 @@ public class Pacman extends PApplet {
     Background background;
     Player player;
     PFont font;
+    UserInterface ui;
 
     public void settings() {
         size(800, 800);
@@ -18,7 +19,8 @@ public class Pacman extends PApplet {
 
         background = new Background(this); // 'this' refers to the PApplet that enables us to draw on the actual sketch.
         player = new Player(background);
-        UserInterface ui;
+
+        player.getPlayerLife();
 
 
         // for each ghost!! {
