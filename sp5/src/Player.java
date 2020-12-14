@@ -4,8 +4,7 @@ import processing.core.PApplet;
 public class Player extends PApplet {
     private KeyboardInput keyboardInput;
     private Dot dot;
-    private int[][] board;
-    private int boardValue = 1;
+    private int boardValue = 3;
 
     public int getX()
     {
@@ -22,12 +21,10 @@ public class Player extends PApplet {
         return boardValue;
     }
 
-    public Player() {
-        dot = new Dot(0, 0, width - 1, height - 1);
+    public Player(Background b) {
+        dot = new Dot(1, 1, width - 1, height - 1, b);
         keyboardInput = new KeyboardInput();
     }
-
-
 
     public void onKeyPressed(char ch) {
 

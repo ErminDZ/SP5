@@ -16,8 +16,13 @@ public class Pacman extends PApplet {
         font = createFont("Arial", 16, true);
         textFont(font, 16);
 
-        b = new Background(this/*, 25, 25*/); // 'this' refers to the PApplet that enables us to draw on the actual sketch.
-        p = new Player();
+        b = new Background(this); // 'this' refers to the PApplet that enables us to draw on the actual sketch.
+        p = new Player(b);
+
+
+        // for each ghost!! {
+           //ghost.setBoard(b.getBoard());
+        // }
 
     }
 
@@ -26,9 +31,9 @@ public class Pacman extends PApplet {
         p.updatePlayer();
         b.clearBoard();
 
-        if (p == null) System.out.println("Player not found");
-
         b.setBoardValue(p.getX(), p.getY(), p.getBoardValue());
+
+        // checkCollisions(); // this method is to implement collision checks for pacman vs ghosts, cheese and powerups.
 
         b.UpdateBoard();
     }

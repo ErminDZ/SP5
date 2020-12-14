@@ -10,12 +10,15 @@ public class Dot {
     private final int maxY;
     private boolean  finish = false;
 
-    public Dot(int x, int y, int maxX, int maxY)
+    private Background background;
+
+    public Dot(int x, int y, int maxX, int maxY, Background b)
     {
         this.x = x;
         this.y = y;
         this.maxX = maxX;
         this.maxY = maxY;
+        this.background = b;
     }
 
     public int getX()
@@ -30,6 +33,11 @@ public class Dot {
 
     public void moveLeft()
     {
+        if(!background.canMove(x, y, -1, 0))
+        {
+            return;
+        }
+
         --x;
         if(x < 0)
         {
@@ -39,6 +47,11 @@ public class Dot {
 
     public void moveRight()
     {
+        if(!background.canMove(x, y, 1, 0))
+        {
+            return;
+        }
+
         ++x;
         if(x > maxX)
         {
@@ -48,6 +61,11 @@ public class Dot {
 
     public void moveUp()
     {
+        if(!background.canMove(x, y, 0, -1))
+        {
+            return;
+        }
+
         --y;
         if(y < 0)
         {
@@ -57,6 +75,11 @@ public class Dot {
 
     public void moveDown()
     {
+        if(!background.canMove(x, y, 0, +1))
+        {
+            return;
+        }
+
         ++y;
         if(y > maxY)
         {
