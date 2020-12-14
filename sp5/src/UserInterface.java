@@ -12,12 +12,11 @@ public class UserInterface extends PApplet {
     }
 
     public void ui() {
-        p.fill(255);
-        p.textSize(25);
-
 
         //Player life UI
         if (player.getPlayerLife() > 0) {
+            p.fill(255);
+            p.textSize(25);
             p.text("Player Lives: " + player.getPlayerLife(), 25, 25);
         }
 
