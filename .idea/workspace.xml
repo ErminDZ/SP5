@@ -21,10 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="66069c80-2a5e-47fa-b3dd-a3c73b0d7fc7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SP5/Background.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SP5/Pacman.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SP5/Pacman.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SP5/Pacman.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sp5/src/Pacman.java" beforeDir="false" afterPath="$PROJECT_DIR$/sp5/src/Pacman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sp5/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/sp5/src/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sp5/src/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/sp5/src/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

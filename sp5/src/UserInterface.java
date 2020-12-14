@@ -21,20 +21,22 @@ public class UserInterface extends PApplet {
             p.text("Player Lives: " + player.getPlayerLife(), 25, 25);
         }
 
-        // Player Win/ Player Lose
-        if (player.getPlayerLife() > 2 && player.getPlayerLife() < 3) {
+        // Player Lose display message. to do: When player loses life, message should dissapear when starting a new life and resetting from starting position in new life.
+        if (player.getPlayerLife() == 2) {
             p.fill(255);
-            p.text("You!", width / 2, height / 2);
+            p.text("You lost a life.", width / 2, height / 2);
             p.textSize(100);
-        } else if (player.getPlayerLife() > 1 && player.getPlayerLife() < 2) {
+        } else if (player.getPlayerLife() == 1) {
             p.fill(255);
-            p.text("Player 1 wins!", width / 2, height / 2);
+            p.text("You lost a life.", width / 2, height / 2);
             p.textSize(100);
-        } else if (player.getPlayerLife() > 0){
-
+        } else if (player.getPlayerLife() == 0){
+            p.fill(255);
+            p.text("You died.", width / 2, height /2);
+            p.textSize(100);
         }
 
-        //Number of ghosts left
+        //Number of ghosts left on map. Need, don't need?
         if (player.getPlayerLife() > 0)
         {
             p.fill(255);

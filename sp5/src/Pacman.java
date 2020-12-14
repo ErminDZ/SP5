@@ -9,7 +9,7 @@ public class Pacman extends PApplet {
     UserInterface ui;
 
     public void settings() {
-        size(1001, 1001);
+        size(800, 800);
     }
 
     public void setup() {
