@@ -2,10 +2,21 @@ import processing.core.PApplet;
 
 
 public class Player extends PApplet {
+
     private KeyboardInput keyboardInput;
     private Dot dot;
     private int[][] board;
     private int boardValue = 1;
+    private int player1Life;
+    private int player2Life;
+
+    //public int getPlayer1Life() { Kan ikke få det til, at virke helt.
+//        return this.player1Life;
+//    }
+//
+//    public int getPlayer2Life() {
+//        return this.player2Life;
+//    }
 
     public int getX()
     {
