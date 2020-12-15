@@ -9,12 +9,12 @@ public class Ghost extends PApplet {
     public int boardValue;
     private Player player;
 
-    Ghost(int boardValue, Player player) //int numberOfEnemies) throws IllegalAccessException
+    Ghost(int boardValue, Player player, Background background) //int numberOfEnemies) throws IllegalAccessException
     {
         this.player = player;
         this.boardValue = boardValue;
 
-        dot = new Dot(12, 12);
+        dot = new Dot(12, 12,-1,-1,background);
 
     }
 

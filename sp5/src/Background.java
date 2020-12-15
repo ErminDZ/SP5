@@ -1,7 +1,5 @@
 import processing.core.PApplet;
 
-import java.util.Random;
-
 public class Background {
 
 
@@ -10,62 +8,37 @@ public class Background {
     public Dot d;
     public Player player;
 
-    int width;
-    int height;
     int[][] board;
 
-
-    public Background(PApplet p, int width, int height) {
+    public Background(PApplet p) {
         this.p = p;
-
-        if (width < 10 || height < 10) {
-            throw new IllegalArgumentException("Width and height must be at least 10");
-        }
-
-        this.board = new int[width][height];
-        this.width = width;
-        this.height = height;
-
+        this.board = getStaticMap(); //NY
     }
 
     public int[][] getBoard() {
-        return board;
+        return this.board;
     }
 
     public void clearBoard() {
-
-        for (int y = 0; y < height; ++y) {
-            for (int x = 0; x < width; ++x) {
-                board[x][y] = 0;
-            }
-        }
+        this.board = getStaticMap(); // NY
     }
 
-    public int getWidth() {
-        return width;
-    }
-
-    public int getHeight() {
-        return height;
-    }
 
     public void setBoardValue(int x, int y, int value) {
         if (x > 25)
             System.out.println(x);
-        board[x][y] = value;
+        this.board[x][y] = value;
     }
 
     // Updates visuals
     public void UpdateBoard() {
+        for (int y = 0; y < board.length; y++) {
+            for (int x = 0; x < board.length; x++) {
 
-        int[][] board = getBoard();
-
-        for (int y = 0; y < getHeight(); y++) {
-            for (int x = 0; x < getWidth(); x++) {
-                if (board[x][y] == 0) {
+                if (board[x][y] == 0) { // WALLS
+                    p.fill(255, 0, 0);
+                } else if (board[x][y] == 1) { // PATH
                     p.fill(0, 0, 0);
-                } else if (board[x][y] == 1) { // YELLOW
-                    p.fill(255, 255, 0);
                 } else if (board[x][y] == 2) {
                     p.fill(255, 0, 0);
                 } else if (board[x][y] == 3) { //ORANGE
@@ -82,7 +55,7 @@ public class Background {
                 }
 
                 // DELETE ME:
-                if (x == 0 && y == 12 || x == 24 && y == 12)
+                if (x == 0 && y == 10 || x == 19 && y == 10)
                     p.fill(255,255,255);
 
                 p.stroke(100, 100, 100);
@@ -92,6 +65,82 @@ public class Background {
 
 
     }
+
+    public int[][] getStaticMap() {
+        return
+        new int[][]{
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                {0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0},
+                {0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0},
+                {0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0},
+                {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0},
+                {0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0},
+                {0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0},
+                {0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0},
+                {0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0},
+                {0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0},
+                {0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0},
+                {0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0},
+                {0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0},
+                {0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0},
+                {0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0},
+                {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0},
+                {0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0},
+                {0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0},
+                {0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+        };
+    }
+
+
+    public boolean canMove(int x, int y, int deltaX, int deltaY)
+    {
+        // Delta x or y is the value that we want to move. e.g. deltaX == 1, is +1 to x coordinate.
+        if (board[x + deltaX][y + deltaY] == 0)
+        {
+            return false;
+        }
+        return true;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 
