@@ -23,33 +23,31 @@ public class Pacman extends PApplet {
         int ghostColorOffset = 3;
         for (int i =0; i < ghosts.length; i++)
         {
-//           ghosts[i] = new Ghost(i + ghostColorOffset, p, b); // TODO: Fix the value of the board so it correctly fits to each ghost color.
+//          ghosts[i] = new Ghost(i + ghostColorOffset, p); // TODO: Fix the value of the board so it correctly fits to each ghost color.
 
         }
     }
 
 
     public void draw() {
-        b.clearBoard();
-        p.updatePlayer();
 
+        b.clearBoard();
 
         // Update Ghosts
-//        for (int i = 0; i < ghosts.length; i++)
-//        {
+        for (int i = 0; i < ghosts.length; i++)
+        {
 //            ghosts[i].update();
 //            b.setBoardValue(ghosts[i].dot.getX(),ghosts[i].dot.getY(), ghosts[i].getBoardValue());
-//        }
+        }
 
         // Update Player
 
-
+        p.updatePlayer();
         b.setBoardValue(p.getX(), p.getY(), p.getBoardValue());
 
         // Redraw board
         b.UpdateBoard();
-
-
+        
     }
 
     public void keyPressed()

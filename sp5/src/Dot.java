@@ -6,18 +6,19 @@ public class Dot {
 
     private int x;
     private int y;
-    private int maxX;
-    private int maxY;
+    private final int maxX; // NY
+    private final int maxY; // NY
 
-    private Background background;
+    private Background background; // NY
 
-    public Dot(int x, int y, int maxX, int maxY, Background b)
+
+    public Dot(int x, int y, int maxX, int maxY, Background background)
     {
         this.x = x;
         this.y = y;
-        this.maxX = maxX;
-        this.maxY = maxY;
-        this.background = b;
+        this.maxX = maxX; // NY
+        this.maxY = maxY; // NY
+        this.background = background; //NY
     }
 
     public int getX()
@@ -40,15 +41,16 @@ public class Dot {
 
     public void moveLeft()
     {
-        if(!background.canMove(x, y, -1, 0))
+        if(!background.canMove(x, y, -1, 0)) // NY
         {
-            return;
+            return; //NY
         }
 
         --x;
-        if(x < 0)
+
+        if(x < 0) // NY
         {
-            x = 0;
+            x = 0; // NY
         }
     }
 
@@ -58,38 +60,38 @@ public class Dot {
         {
             return;
         }
-
         ++x;
-        if(x > maxX)
+
+        if(x < maxX)
         {
             x = maxX;
         }
     }
+
     public void moveUp()
     {
         if(!background.canMove(x, y, 0, -1))
         {
             return;
         }
-
         --y;
         if(y < 0)
         {
             y = 0;
         }
     }
+
     public void moveDown()
     {
         if(!background.canMove(x, y, 0, +1))
         {
             return;
         }
-
         ++y;
-        if(y > maxY)
+
+        if(y < maxY)
         {
             y = maxY;
         }
     }
-
 }

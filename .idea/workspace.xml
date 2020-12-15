@@ -19,19 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66069c80-2a5e-47fa-b3dd-a3c73b0d7fc7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SP5/Background.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SP5/Background.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SP5/Dot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SP5/Dot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SP5/Ghost.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SP5/Ghost.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SP5/Pacman.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SP5/Pacman.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SP5/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SP5/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sp5/src/Background.java" beforeDir="false" afterPath="$PROJECT_DIR$/sp5/src/Background.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sp5/src/Dot.java" beforeDir="false" afterPath="$PROJECT_DIR$/sp5/src/Dot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sp5/src/Ghost.java" beforeDir="false" afterPath="$PROJECT_DIR$/sp5/src/Ghost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sp5/src/Pacman.java" beforeDir="false" afterPath="$PROJECT_DIR$/sp5/src/Pacman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sp5/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/sp5/src/Player.java" afterDir="false" />
-    </list>
+    <list default="true" id="66069c80-2a5e-47fa-b3dd-a3c73b0d7fc7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,7 +44,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Skrivebord/datamatiker/programer/processing-3.5.4/core/library" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../Program Files/processing-3.5.4/core/library/core.jar" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -97,36 +85,6 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1607965727013">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1607965727013" />
-    <state width="1493" height="344" key="GridCell.Tab.0.bottom" timestamp="1608040677333">
-      <screen x="-1920" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="344" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1536.824@-1920.0.1536.824" timestamp="1608040677333" />
-    <state width="1877" height="346" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1608035293725" />
-    <state width="1493" height="344" key="GridCell.Tab.0.center" timestamp="1608040677333">
-      <screen x="-1920" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="344" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1536.824@-1920.0.1536.824" timestamp="1608040677333" />
-    <state width="1877" height="346" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1608035293725" />
-    <state width="1493" height="344" key="GridCell.Tab.0.left" timestamp="1608040677333">
-      <screen x="-1920" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="344" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1536.824@-1920.0.1536.824" timestamp="1608040677333" />
-    <state width="1877" height="346" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1608035293725" />
-    <state width="1493" height="344" key="GridCell.Tab.0.right" timestamp="1608040677333">
-      <screen x="-1920" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="344" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1536.824@-1920.0.1536.824" timestamp="1608040677333" />
-    <state width="1877" height="346" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1608035293725" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1607965729911">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1607965729911" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
