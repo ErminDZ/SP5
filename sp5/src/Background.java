@@ -41,13 +41,13 @@ public class Background {
             for (int x = 0; x < board.length; x++) {
 
                 if (board[x][y] == 0) { // WALLS
-                    p.fill(0, 0, 204);
+                    p.fill(255, 0, 0);
                 } else if (board[x][y] == 1) { // PATH
                     p.fill(0, 0, 0);
                 } else if (board[x][y] == 2) {
-                    p.fill(255, 255, 0);
-                } else if (board[x][y] == 3) { //ORANGE
-                    p.fill(255, 168, 1);
+                    p.fill(255, 0, 0);
+                } else if (board[x][y] == 3) { //grå
+                    p.fill(111, 111, 111);
                 } else if (board[x][y] == 4) // RED
                 {
                     p.fill(255, 0, 0);
@@ -82,10 +82,10 @@ public class Background {
                         {0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0},
                         {0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0},
                         {0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0},
-                        {0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0},
-                        {0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0},
-                        {0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0},
-                        {0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0},
+                        {0, 1, 1, 1, 1, 0, 0, 1, 0, 3, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0},
+                        {0, 0, 0, 0, 1, 0, 0, 1, 3, 3, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0},
+                        {0, 0, 0, 0, 1, 0, 0, 1, 3, 3, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0},
+                        {0, 1, 1, 1, 1, 0, 0, 1, 0, 3, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0},
                         {0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0},
                         {0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0},
                         {0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0},
@@ -99,7 +99,7 @@ public class Background {
 
     public boolean canMove(int x, int y, int deltaX, int deltaY) {
         // Delta x or y is the value that we want to move. e.g. deltaX == 1, is +1 to x coordinate.
-        if (board[x + deltaX][y + deltaY] == 0) {
+        if (board[x + deltaX][y + deltaY] == 0 || board[x + deltaX][y + deltaY] == 3 ) {
             return false;
         }
         return true;

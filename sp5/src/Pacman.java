@@ -1,11 +1,5 @@
 import processing.core.PApplet;
 import processing.core.PFont;
-import  java.io.File;
-import processing.core.PImage;
-
-
-
-
 
 public class Pacman extends PApplet {
 
@@ -29,11 +23,10 @@ public class Pacman extends PApplet {
         int ghostColorOffset = 3;
         for (int i =0; i < ghosts.length; i++)
         {
-       ghosts[i] = new Ghost(i + ghostColorOffset, p, b); // TODO: Fix the value of the board so it correctly fits to each ghost color.
+          ghosts[i] = new Ghost(i + ghostColorOffset, p, b); // TODO: Fix the value of the board so it correctly fits to each ghost color.
 
         }
     }
-
 
 
     public void draw() {
@@ -43,8 +36,8 @@ public class Pacman extends PApplet {
         // Update Ghosts
         for (int i = 0; i < ghosts.length; i++)
         {
-          ghosts[i].update();
-         b.setBoardValue(ghosts[i].dot.getX(),ghosts[i].dot.getY(), ghosts[i].getBoardValue());
+            ghosts[i].update();
+            b.setBoardValue(ghosts[i].dot.getX(),ghosts[i].dot.getY(), ghosts[i].getBoardValue());
         }
 
         // Update Player
@@ -54,7 +47,8 @@ public class Pacman extends PApplet {
 
         // Redraw board
         b.UpdateBoard();
-
+        b.UpdateFood();
+        
     }
 
     public void keyPressed()
