@@ -7,6 +7,12 @@ public class Player extends PApplet {
 
     private int boardValue = 2;
 
+    private int playerLife = 3;
+
+    public int getPlayerLife() {
+        return this.playerLife;
+    }
+
     public int getX() {
         return this.dot.getX();
     }
@@ -20,7 +26,7 @@ public class Player extends PApplet {
     }
 
     public Player(Background background ) {
-        dot = new Dot(12, 12,-1,-1, background);
+        dot = new Dot(10, 11,-1,-1, background);
         keyboardInput = new KeyboardInput();
     }
 
