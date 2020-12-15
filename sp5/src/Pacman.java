@@ -3,11 +3,10 @@ import processing.core.PFont;
 
 public class Pacman extends PApplet {
 
-    Background background;
-    Player player;
+    Background b;
+    Player p;
     Ghost[] ghosts = new Ghost[4];
     PFont font;
-    UserInterface userInterface;
 
     public void settings() {
         size(800, 800);
@@ -18,10 +17,8 @@ public class Pacman extends PApplet {
         font = createFont("Arial", 16, true);
         textFont(font, 16);
 
-        background = new Background(this); // 'this' refers to the PApplet that enables us to draw on the actual sketch.
-        player = new Player(background);
-
-        player.getPlayerLife();
+        b = new Background(this); // 'this' refers to the PApplet that enables us to draw on the actual sketch.
+        p = new Player(b);
 
         int ghostColorOffset = 3;
         for (int i =0; i < ghosts.length; i++)
@@ -34,7 +31,7 @@ public class Pacman extends PApplet {
 
     public void draw() {
 
-        background.clearBoard();
+        b.clearBoard();
 
         // Update Ghosts
         for (int i = 0; i < ghosts.length; i++)
@@ -45,24 +42,23 @@ public class Pacman extends PApplet {
 
         // Update Player
 
-        player.updatePlayer();
-        background.setBoardValue(player.getX(), player.getY(), player.getBoardValue());
+        p.updatePlayer();
+        b.setBoardValue(p.getX(), p.getY(), p.getBoardValue());
 
         // Redraw board
-        background.UpdateBoard();
-
-        userInterface.ui();
+        b.UpdateBoard();
+        b.UpdateFood();
         
     }
 
     public void keyPressed()
     {
-        player.onKeyPressed(key);
+        p.onKeyPressed(key);
     }
 
     public void keyReleased()
     {
-        player.onKeyReleased(key);
+        p.onKeyReleased(key);
     }
 }
 
