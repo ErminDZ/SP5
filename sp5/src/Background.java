@@ -40,20 +40,29 @@ public class Background {
         for (int y = 0; y < board.length; y++) {
             for (int x = 0; x < board.length; x++) {
 
-                if (board[x][y] == 0) { // WALLS
-                    p.fill(255, 0, 0);
-                } else if (board[x][y] == 1) { // PATH
-                    p.fill(0, 0, 0);
-                } else if (board[x][y] == 2) {
-                    p.fill(255, 0, 0);
-                } else if (board[x][y] == 3) { //grå
-                    p.fill(111, 111, 111);
-                } else if (board[x][y] == 4) // RED
+                if (board[x][y] == 0)
+                {
+                    p.fill(0, 0, 255);// WALLS/blue
+                }
+                else if (board[x][y] == 1)
+                {
+                    p.fill(0, 0, 0);// PATH/black
+                }
+                else if (board[x][y] == 2)
+                {
+                    p.fill(255, 255, 0); //Yellow/player
+                }
+                else if (board[x][y] == 3)
+                {
+                    p.fill(111, 111, 111);//
+                }
+                else if (board[x][y] == 4)
+                {
+                    p.fill(255, 0, 0);// RED
+                }
+                else if (board[x][y] == 5) //
                 {
                     p.fill(255, 0, 0);
-                } else if (board[x][y] == 5) // PINK
-                {
-                    p.fill(255, 193, 203);
                 } else if (board[x][y] == 6) // LIGHT BLUE
                 {
                     p.fill(0, 255, 255);

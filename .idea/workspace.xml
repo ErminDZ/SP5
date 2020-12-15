@@ -19,7 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66069c80-2a5e-47fa-b3dd-a3c73b0d7fc7" name="Default Changelist" comment="" />
+    <list default="true" id="66069c80-2a5e-47fa-b3dd-a3c73b0d7fc7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/out/production/SP5/Background.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SP5/Background.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SP5/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SP5/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp5/src/Background.java" beforeDir="false" afterPath="$PROJECT_DIR$/sp5/src/Background.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sp5/src/Pacman.java" beforeDir="false" afterPath="$PROJECT_DIR$/sp5/src/Pacman.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +49,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Skrivebord/datamatiker/programer/processing-3.5.4/core/library" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Skrivebord/datamatiker/programer/processing-3.5.4/core/library" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -91,26 +96,26 @@
       <screen x="-1920" y="0" width="1536" height="824" />
     </state>
     <state x="-1447" y="154" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1536.824@-1920.0.1536.824" timestamp="1608041799816" />
-    <state width="1877" height="2" key="GridCell.Tab.0.bottom" timestamp="1608048177989">
+    <state width="1877" height="2" key="GridCell.Tab.0.bottom" timestamp="1608049829284">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1536.824@-1920.0.1536.824" timestamp="1608043895556" />
-    <state width="1877" height="2" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1608048177989" />
-    <state width="1877" height="2" key="GridCell.Tab.0.center" timestamp="1608048177989">
+    <state width="1877" height="2" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1608049829284" />
+    <state width="1877" height="2" key="GridCell.Tab.0.center" timestamp="1608049829283">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1536.824@-1920.0.1536.824" timestamp="1608043895556" />
-    <state width="1877" height="2" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1608048177989" />
-    <state width="1877" height="2" key="GridCell.Tab.0.left" timestamp="1608048177989">
+    <state width="1877" height="2" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1608049829283" />
+    <state width="1877" height="2" key="GridCell.Tab.0.left" timestamp="1608049829280">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1536.824@-1920.0.1536.824" timestamp="1608043895556" />
-    <state width="1877" height="2" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1608048177989" />
-    <state width="1877" height="2" key="GridCell.Tab.0.right" timestamp="1608048177989">
+    <state width="1877" height="2" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1608049829280" />
+    <state width="1877" height="2" key="GridCell.Tab.0.right" timestamp="1608049829284">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1536.824@-1920.0.1536.824" timestamp="1608043895556" />
-    <state width="1877" height="2" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1608048177989" />
+    <state width="1877" height="2" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1608049829284" />
     <state x="-1671" y="0" key="SettingsEditor" timestamp="1608041805393">
       <screen x="-1920" y="0" width="1536" height="824" />
     </state>

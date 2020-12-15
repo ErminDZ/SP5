@@ -3,8 +3,8 @@ import processing.core.PFont;
 
 public class Pacman extends PApplet {
 
-    Background b;
-    Player p;
+    Background background;
+    Player player;
     Ghost[] ghosts = new Ghost[4];
     PFont font;
 
@@ -17,13 +17,13 @@ public class Pacman extends PApplet {
         font = createFont("Arial", 16, true);
         textFont(font, 16);
 
-        b = new Background(this); // 'this' refers to the PApplet that enables us to draw on the actual sketch.
-        p = new Player(b);
+        background = new Background(this); // 'this' refers to the PApplet that enables us to draw on the actual sketch.
+        player = new Player(background);
 
         int ghostColorOffset = 3;
         for (int i =0; i < ghosts.length; i++)
         {
-          ghosts[i] = new Ghost(i + ghostColorOffset, p, b); // TODO: Fix the value of the board so it correctly fits to each ghost color.
+          ghosts[i] = new Ghost(i + ghostColorOffset, player, background); // TODO: Fix the value of the board so it correctly fits to each ghost color.
 
         }
     }
@@ -31,34 +31,34 @@ public class Pacman extends PApplet {
 
     public void draw() {
 
-        b.clearBoard();
+        background.clearBoard();
 
         // Update Ghosts
         for (int i = 0; i < ghosts.length; i++)
         {
             ghosts[i].update();
-            b.setBoardValue(ghosts[i].dot.getX(),ghosts[i].dot.getY(), ghosts[i].getBoardValue());
+            background.setBoardValue(ghosts[i].dot.getX(),ghosts[i].dot.getY(), ghosts[i].getBoardValue());
         }
 
         // Update Player
 
-        p.updatePlayer();
-        b.setBoardValue(p.getX(), p.getY(), p.getBoardValue());
+        player.updatePlayer();
+        background.setBoardValue(player.getX(), player.getY(), player.getBoardValue());
 
         // Redraw board
-        b.UpdateBoard();
-        b.UpdateFood();
+        background.UpdateBoard();
+        background.UpdateFood();
         
     }
 
     public void keyPressed()
     {
-        p.onKeyPressed(key);
+        player.onKeyPressed(key);
     }
 
     public void keyReleased()
     {
-        p.onKeyReleased(key);
+        player.onKeyReleased(key);
     }
 }
 
