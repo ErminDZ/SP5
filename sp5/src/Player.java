@@ -7,6 +7,12 @@ public class Player extends PApplet {
 
     private int boardValue = 5;
 
+    private int playerLife = 3;
+
+    public int getPlayerLife() {
+        return this.playerLife;
+    }
+
     public int getX() {
         return this.dot.getX();
     }
