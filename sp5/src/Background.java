@@ -36,11 +36,11 @@ public class Background {
             for (int x = 0; x < board.length; x++) {
 
                 if (board[x][y] == 0) { // WALLS
-                    p.fill(255, 0, 0);
+                    p.fill(0, 0, 204);
                 } else if (board[x][y] == 1) { // PATH
                     p.fill(0, 0, 0);
                 } else if (board[x][y] == 2) {
-                    p.fill(255, 0, 0);
+                    p.fill(255, 255, 0);
                 } else if (board[x][y] == 3) { //ORANGE
                     p.fill(255, 168, 1);
                 } else if (board[x][y] == 4) // RED
