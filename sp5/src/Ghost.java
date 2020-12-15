@@ -14,7 +14,7 @@ public class Ghost extends PApplet {
         this.player = player;
         this.boardValue = boardValue;
 
-        dot = new Dot(9, 9,-1,-1,background);
+        dot = new Dot(1, 1,-1,-1,background);
 
     }
 

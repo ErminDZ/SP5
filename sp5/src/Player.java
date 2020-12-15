@@ -26,7 +26,7 @@ public class Player extends PApplet {
     }
 
     public Player(Background background ) {
-        dot = new Dot(10, 11,-1,-1, background);
+        dot = new Dot(1, 1,-1,-1, background);
         keyboardInput = new KeyboardInput();
     }
 

@@ -5,7 +5,6 @@ public class UserInterface extends PApplet {
     Player player;
     private PApplet p;
 
-
     public UserInterface(PApplet p, Player player)
     {
         this.player = player;
@@ -17,7 +16,7 @@ public class UserInterface extends PApplet {
         if (player.getPlayerLife() > 0) {
             p.fill(255);
             p.textSize(25);
-            p.text("Player Lives: " + player.getPlayerLife(), 25, 25);
+            p.text("Player Lives: " + player.getPlayerLife(), 0, 0);
         }
 
         // Player Lose display message. to do: When player loses life, message should dissapear when starting a new life and resetting from starting position in new life.
