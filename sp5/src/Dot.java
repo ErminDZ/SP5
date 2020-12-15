@@ -6,13 +6,18 @@ public class Dot {
 
     private int x;
     private int y;
+    private int maxX;
+    private int maxY;
 
-    private boolean  finish = false;
+    private Background background;
 
-    public Dot(int x, int y)
+    public Dot(int x, int y, int maxX, int maxY, Background b)
     {
         this.x = x;
         this.y = y;
+        this.maxX = maxX;
+        this.maxY = maxY;
+        this.background = b;
     }
 
     public int getX()
@@ -35,22 +40,56 @@ public class Dot {
 
     public void moveLeft()
     {
-        // TODO: Collision detection
+        if(!background.canMove(x, y, -1, 0))
+        {
+            return;
+        }
+
         --x;
+        if(x < 0)
+        {
+            x = 0;
+        }
     }
 
     public void moveRight()
     {
-        ++x;
-    }
+        if(!background.canMove(x, y, 1, 0))
+        {
+            return;
+        }
 
+        ++x;
+        if(x > maxX)
+        {
+            x = maxX;
+        }
+    }
     public void moveUp()
     {
-        --y;
-    }
+        if(!background.canMove(x, y, 0, -1))
+        {
+            return;
+        }
 
+        --y;
+        if(y < 0)
+        {
+            y = 0;
+        }
+    }
     public void moveDown()
     {
+        if(!background.canMove(x, y, 0, +1))
+        {
+            return;
+        }
+
         ++y;
+        if(y > maxY)
+        {
+            y = maxY;
+        }
     }
+
 }

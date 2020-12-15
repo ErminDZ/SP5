@@ -4,19 +4,20 @@ import java.util.Random;
 
 public class Ghost extends PApplet {
     private Random rnd = new Random();
+    private Dot [] enemies;
     public Dot dot;
-    private Background background;
     public int boardValue;
     private Player player;
 
-    Ghost(int boardValue, Player player) //int numberOfEnemies) throws IllegalAccessException
+    Ghost(int boardValue, Player player, Background b)  //int numberOfEnemies) throws IllegalAccessException
     {
-        this.player = player;
         this.boardValue = boardValue;
-
-        dot = new Dot(12, 12);
+        this.player = player;
 
     }
+
+//        dot = new Dot(width-1, height-1, width-1, height -1, b);
+
 
     public int getBoardValue()
     {
