@@ -47,6 +47,7 @@ public class Pacman extends PApplet {
 
         // Redraw board
         b.UpdateBoard();
+        b.UpdateFood();
         
     }
 
