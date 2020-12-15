@@ -5,7 +5,7 @@ public class Player extends PApplet {
     private KeyboardInput keyboardInput;
     private Dot dot;
 
-    private int boardValue = 1;
+    private int boardValue = 5;
 
     public int getX() {
         return this.dot.getX();
@@ -19,8 +19,8 @@ public class Player extends PApplet {
         return boardValue;
     }
 
-    public Player() {
-        dot = new Dot(12, 12);
+    public Player(Background background ) {
+        dot = new Dot(12, 12,-1,-1, background);
         keyboardInput = new KeyboardInput();
     }
 
@@ -41,7 +41,7 @@ public class Player extends PApplet {
         if (KeyboardInput.aKeyLeft() && !KeyboardInput.dKeyRight()) {
             if (checkForTeleport())
             {
-                dot.setX(24);
+                dot.setX(19);
             }
             dot.moveLeft();
         }
@@ -59,9 +59,11 @@ public class Player extends PApplet {
 
     private boolean checkForTeleport()
     {
-        if (dot.getY() == 12 || dot.getY() == 13)
+        if (dot.getY() == 10 || dot.getY() == 9)
         {
-            if (dot.getX() == 0 || dot.getX() == 24)
+            if (dot.getX() == 0 || dot.getX() == 19)
+
+
             {
                 return true;
             }
