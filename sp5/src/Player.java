@@ -5,7 +5,7 @@ public class Player extends PApplet {
     private KeyboardInput keyboardInput;
     private Dot dot;
 
-    private int boardValue = 5;
+    private int boardValue = 2;
 
     public int getX() {
         return this.dot.getX();
